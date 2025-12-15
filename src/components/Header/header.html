@@ -1,0 +1,43 @@
+<div class="container header__container">
+
+  <a href="#" class="header__logo">
+    <picture>
+      <source srcset="/src/images/tablet/header/logo/header-logo.png" media="(min-width: 1280px)">
+
+      <source srcset="/src/images/tablet/header/logo/header-logo.png" media="(min-width: 768px)">
+
+      <img src="/src/images/mobile/header/logo/header-logo.png" alt="Cinemania Logo">
+    </picture>
+    <span class="header__logo-text">Cinemania</span>
+  </a>
+
+  <nav class="header__nav-menu">
+    <ul class="header__nav-list">
+      <li><a href="#" class="header__nav-link">HOME</a></li>
+      <li><a href="#" class="header__nav-link">CATALOG</a></li>
+      <li><a href="#" class="header__nav-link">MY LIBRARY</a></li>
+    </ul>
+  </nav>
+
+  <button type="button" class="header__menu-btn">MENU</button>
+
+  <button class="theme-switch" id="theme-switch" type="button" aria-label="Toggle Theme">
+    <span class="theme-switch-handle"></span>
+
+    <div class="theme-switch-icons">
+      <picture>
+        <source srcset="/src/images/desktop/header/theme/dark-mode.png" media="(min-width: 1280px)">
+        <source srcset="/src/images/tablet/header/theme/dark-mode.png" media="(min-width: 768px)">
+        <img src="/src/images/mobile/header/theme/dark-mode.png" class="icon-moon" alt="">
+      </picture>
+      <picture>
+        <source srcset="/src/images/desktop/header/theme/light-mode.png" media="(min-width: 1280px)">
+        <source srcset="/src/images/tablet/header/theme/light-mode.png" media="(min-width: 768px)">
+        <img src="/src/images/mobile/header/theme/light-mode.png" class="icon-sun" alt="">
+      </picture>
+    </div>
+
+  </button>
+
+  <div class="header__backdrop"></div>
+</div>

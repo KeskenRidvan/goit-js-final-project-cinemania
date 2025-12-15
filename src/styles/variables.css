@@ -26,7 +26,8 @@
   --clr-gray-500: #f8f8f8;
 
   --clr-white: #ffffff;
-  --clr-white-blur: rgba(255, 255, 255, 0.2);
+  --clr-dark-blur: rgba(255, 255, 255, 0.2);
+  --clr-white-blur: rgba(0, 0, 0, 0.2);
 
   /* colors end */
 
@@ -53,6 +54,9 @@
   --body: var(--clr-black-800);
 
   --header-text: var(--clr-gray-800);
+  --header-logo-text: var(--clr-white);
+  --header-mobile-menu-text: var(--clr-white);
+  --header-mobile-bg: var(--clr-dark-blur);
   --body-text: var(--clr-gray-700);
   /* theme dark end */
 }
@@ -62,5 +66,8 @@
   --body: var(--clr-white);
 
   --header-text: var(--clr-gray-900);
+  --header-logo-text: var(--clr-black-600);
+  --header-mobile-menu-text: var(--clr-black-800);
   --body-text: var(--clr-black-800);
+  --header-mobile-bg: var(--clr-white-blur);
 }
