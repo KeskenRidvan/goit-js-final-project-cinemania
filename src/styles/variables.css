@@ -1,0 +1,66 @@
+:root {
+  /* fonts */
+  --ff-roboto: "Roboto", system-ui, sans-serif;
+  /* fonts end */
+
+  /* colors */
+  --clr-orange: #f87719;
+  --clr-orange-grd-left: linear-gradient(
+    141.22deg,
+    #ffc226 9.4%,
+    #f84119 91.91%
+  );
+  --clr-orange-grd-right: linear-gradient(
+    141.22deg,
+    #f84119 9.4%,
+    rgba(248, 159, 25, 0.68) 91.91%
+  );
+
+  --clr-black-900: #000000;
+  --clr-black-800: #111111;
+  --clr-black-700: #171717;
+  --clr-black-600: #282828;
+
+  --clr-gray-900: #595959;
+  --clr-gray-800: #b7b7b7;
+  --clr-gray-500: #f8f8f8;
+
+  --clr-white: #ffffff;
+  --clr-white-blur: rgba(255, 255, 255, 0.2);
+
+  /* colors end */
+
+  /* font sizes */
+  --fs-6xl: 64px;
+  --fs-5xl: 52px;
+  --fs-4xl: 40px;
+  --fs-3xl: 28px;
+  --fs-2xl: 24px;
+  --fs-xl: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+  /* font sizes end */
+
+  /* font weights */
+  --fw-bold: 700;
+  --fw-medium: 600;
+  --fw-regular: 500;
+  /* font weights end */
+
+  /* theme dark */
+  --header: var(--clr-black-900);
+  --body: var(--clr-black-800);
+
+  --header-text: var(--clr-gray-800);
+  --body-text: var(--clr-gray-700);
+  /* theme dark end */
+}
+
+.themeLight {
+  --header: var(--clr-white);
+  --body: var(--clr-white);
+
+  --header-text: var(--clr-gray-900);
+  --body-text: var(--clr-black-800);
+}
