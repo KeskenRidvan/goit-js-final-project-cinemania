@@ -1,0 +1,116 @@
+.hero-movie__container {
+  --hero-bg-url: url("https://via.placeholder.com/1280x720?text=No+Image");
+
+  background-image: linear-gradient(
+      86.47deg,
+      #111111 33.63%,
+      rgba(17, 17, 17, 0) 76.86%
+    ),
+    var(--hero-bg-url);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  max-width: 100%;
+  height: 380px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  color: var(--clr-white);
+}
+
+.hero-movie__title {
+  /* Genişliği serbest bırakalım ama bir sınır koyalım */
+  margin-bottom: 12px;
+  max-width: 80%;
+
+  /* 1. SİHİR: Satır Sınırlama (Line Clamp) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* En fazla 2 satır göster, gerisine ... koy */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  /* 2. SİHİR: Minimum Yükseklik (Layout Stability) */
+  /* Satır yüksekliği (line-height) 1.2 ise ve 2 satır istiyorsak: 1.2 * 2 = 2.4em */
+  line-height: 1.2;
+  min-height: 2.4em;
+
+  /* Kelimelerin çok garip bölünmemesi için */
+  word-wrap: break-word;
+}
+
+.hero-movie__star-container {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.hero-movie__description {
+  width: 245px;
+  padding-bottom: 20px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.hero-movie__button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-movie__container {
+    height: 432px;
+
+    background-image: linear-gradient(
+        82.55deg,
+        #111111 39.6%,
+        rgba(17, 17, 17, 0) 72.95%
+      ),
+      var(--hero-bg-url);
+  }
+
+  .hero-movie__title {
+    font-size: var(--fs-5xl);
+    width: 450px;
+    -webkit-line-clamp: 3; /* Geniş ekranda 3 satıra izin ver */
+  }
+
+  .hero-movie__description {
+    width: 300px;
+    padding-bottom: 28px;
+  }
+
+  .star {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-movie__container {
+    height: 720px;
+
+    background-image: linear-gradient(
+        75deg,
+        #111111 35%,
+        rgba(17, 17, 17, 0) 70%
+      ),
+      var(--hero-bg-url);
+  }
+
+  .star {
+    width: 24px;
+    height: 24px;
+  }
+}

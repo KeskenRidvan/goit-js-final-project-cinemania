@@ -11,12 +11,18 @@
 
 .header__container {
   display: flex;
+  max-width: 100%;
   align-items: center;
   justify-content: space-between;
 }
 
 .header__logo {
   z-index: 3;
+}
+
+.header__logo-icon {
+  height: 32px;
+  width: 32px;
 }
 
 .header__logo-text {
@@ -107,6 +113,12 @@
   justify-content: space-between;
 }
 
+.theme-switch-icons svg {
+  color: var(--clr-white);
+  width: 12px;
+  height: 12px;
+}
+
 .header__backdrop {
   position: fixed;
   top: 0;
@@ -143,6 +155,11 @@
     align-items: center;
     gap: 8px;
     margin-right: 60px;
+  }
+
+  .header__logo-icon {
+    height: 48px;
+    width: 48px;
   }
 
   .header__logo-text {
@@ -186,6 +203,12 @@
     width: 18px;
     height: 18px;
     top: 3px;
+  }
+
+  .theme-switch-icons svg {
+    color: var(--clr-white);
+    width: 14px;
+    height: 14px;
   }
 
   .theme-switch.theme-light .theme-switch-handle {

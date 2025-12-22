@@ -1,13 +1,10 @@
 <div class="container header__container">
 
   <a href="#" class="header__logo">
-    <picture>
-      <source srcset="/src/images/tablet/header/logo/header-logo.png" media="(min-width: 1280px)">
+    <svg class="header__logo-icon">
+      <use href="/src/images/icons/sprite.svg#icon-logo"></use>
+    </svg>
 
-      <source srcset="/src/images/tablet/header/logo/header-logo.png" media="(min-width: 768px)">
-
-      <img src="/src/images/mobile/header/logo/header-logo.png" alt="Cinemania Logo">
-    </picture>
     <span class="header__logo-text">Cinemania</span>
   </a>
 
@@ -25,19 +22,21 @@
     <span class="theme-switch-handle"></span>
 
     <div class="theme-switch-icons">
-      <picture>
-        <source srcset="/src/images/desktop/header/theme/dark-mode.png" media="(min-width: 1280px)">
-        <source srcset="/src/images/tablet/header/theme/dark-mode.png" media="(min-width: 768px)">
-        <img src="/src/images/mobile/header/theme/dark-mode.png" class="icon-moon" alt="">
-      </picture>
-      <picture>
-        <source srcset="/src/images/desktop/header/theme/light-mode.png" media="(min-width: 1280px)">
-        <source srcset="/src/images/tablet/header/theme/light-mode.png" media="(min-width: 768px)">
-        <img src="/src/images/mobile/header/theme/light-mode.png" class="icon-sun" alt="">
-      </picture>
+      <svg>
+        <use href="/src/images/icons/sprite.svg#icon-dark"></use>
+      </svg>
+
+      <svg>
+        <use href="/src/images/icons/sprite.svg#icon-light"></use>
+      </svg>
+
     </div>
 
   </button>
+
+
+
+
 
   <div class="header__backdrop"></div>
 </div>
