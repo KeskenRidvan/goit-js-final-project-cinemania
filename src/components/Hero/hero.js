@@ -5,14 +5,34 @@ import { createHeroLanding } from "./hero-landing/hero-landing";
 import { createHeroMovie } from "./hero-movie/hero-movie";
 import { heroTrendingRandomMovie } from "./hero.service";
 
+import { openTrailerModal, openMovieDetailModal } from "../Modal/modal";
+
 export const createHero = async () => {
   const heroRoot = document.querySelector("#hero");
-
   const movie = await heroTrendingRandomMovie();
 
   if (movie) {
     heroRoot.innerHTML = heroMovieTemplate;
     createHeroMovie(movie);
+
+    const trailerBtn = document.querySelector("#hero-movie__btn-trailer");
+    const detailBtn = document.querySelector("#hero-movie__btn-detail");
+
+    const handleTrailerBtn = (event) => {
+      const id = event.currentTarget.dataset.movieId;
+
+      id && openTrailerModal(id);
+    };
+
+    const handleDetailBtn = (event) => {
+      const id = event.currentTarget.dataset.movieId;
+
+      id && openMovieDetailModal(id);
+    };
+
+    trailerBtn?.addEventListener("click", (e) => handleTrailerBtn(e));
+    detailBtn?.addEventListener("click", (e) => handleDetailBtn(e));
+
     return;
   }
 

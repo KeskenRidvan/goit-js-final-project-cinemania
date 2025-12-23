@@ -25,22 +25,18 @@
 }
 
 .hero-movie__title {
-  /* Genişliği serbest bırakalım ama bir sınır koyalım */
   margin-bottom: 12px;
   max-width: 80%;
 
-  /* 1. SİHİR: Satır Sınırlama (Line Clamp) */
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* En fazla 2 satır göster, gerisine ... koy */
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
 
-  /* 2. SİHİR: Minimum Yükseklik (Layout Stability) */
-  /* Satır yüksekliği (line-height) 1.2 ise ve 2 satır istiyorsak: 1.2 * 2 = 2.4em */
   line-height: 1.2;
   min-height: 2.4em;
 
-  /* Kelimelerin çok garip bölünmemesi için */
   word-wrap: break-word;
 }
 
@@ -83,7 +79,8 @@
   .hero-movie__title {
     font-size: var(--fs-5xl);
     width: 450px;
-    -webkit-line-clamp: 3; /* Geniş ekranda 3 satıra izin ver */
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
   }
 
   .hero-movie__description {

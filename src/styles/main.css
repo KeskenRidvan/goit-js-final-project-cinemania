@@ -40,6 +40,19 @@
   color: var(--clr-orange);
 }
 
+.btn-outline-2 {
+  border: 1px solid var(--modal-btn-border);
+  background: transparent;
+  color: var(--modal-btn-text);
+}
+
+.btn-outline-2:hover {
+  border: none;
+  background-color: var(--modal-btn-background);
+  color: var(--modal-btn-text-2);
+  font-weight: var(--fw-medium);
+}
+
 /* Tablet (768px) */
 @media screen and (min-width: 768px) {
   .container {

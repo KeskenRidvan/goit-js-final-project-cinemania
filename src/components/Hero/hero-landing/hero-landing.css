@@ -19,7 +19,8 @@
 .hero-landing__header {
   width: 200px;
   font-weight: var(--fw-bold);
-  text-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
   margin-bottom: 8px;
   line-height: 1.1;
 }

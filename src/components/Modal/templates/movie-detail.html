@@ -1,21 +1,35 @@
-<div class="movie-detail">
-  <img src="{{poster}}" alt="{{title}}" />
+<div class="modal">
+  <button class="modal__close" type="button" aria-label="Close" data-modal-close>
+    <svg class="modal__close-icon">
+      <use href="/src/images/icons/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
 
-  <div class="movie-detail__info">
-    <h2>{{title}}</h2>
+  <div class="movie-detail">
+    <img class="movie-detail__poster" src="{{poster}}" alt="{{title}}" />
 
-    <p>
-      <strong>Vote / Votes:</strong>
-      <span>{{vote}}</span>
-      <span>({{votes}})</span>
-    </p>
+    <div class="movie-detail__content">
+      <h2 class="movie-detail__title">{{title}}</h2>
 
-    <p><strong>Popularity:</strong> {{popularity}}</p>
-    <p><strong>Genre:</strong> {{genres}}</p>
+      <div class="movie-detail__meta">
+        <div class="movie-detail__meta-left">
+          <p>Vote / Votes</p>
+          <p>Popularity</p>
+          <p>Genre</p>
+        </div>
+        <div class="movie-detail__meta-right">
+          <p><span>{{vote}}</span> / <span>{{votes}}</span></p>
+          <p>{{popularity}}</p>
+          <p>{{genre}}</p>
+        </div>
+      </div>
 
-    <h3>ABOUT</h3>
-    <p>{{overview}}</p>
+      <div class="movie-detail__about-title">ABOUT</div>
+      <p class="movie-detail__overview">{{overview}}</p>
 
-    <button class="add-library">Add to library</button>
+      <div class="movie-detail__actions">
+        <button class="btn btn-outline-2" type="button">Add to my library</button>
+      </div>
+    </div>
   </div>
 </div>

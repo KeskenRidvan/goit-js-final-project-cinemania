@@ -15,6 +15,7 @@
     #f84119 9.4%,
     rgba(248, 159, 25, 0.68) 91.91%
   );
+  --clr-orange-blur: rgba(255, 107, 8, 0.5);
 
   --clr-black-900: #000000;
   --clr-black-800: #111111;
@@ -52,23 +53,43 @@
 
   /* theme dark */
   --header: var(--clr-black-900);
-  --body: var(--clr-black-800);
-
   --header-text: var(--clr-gray-800);
   --header-logo-text: var(--clr-white);
   --header-mobile-menu-text: var(--clr-white);
   --header-mobile-bg: var(--clr-dark-blur);
+
+  --body: var(--clr-black-800);
   --body-text: var(--clr-gray-700);
+
+  --modal-background: var(--clr-black-800);
+  --modal-span-background: var(--clr-white);
+  --modal-text-1: var(--clr-white);
+  --modal-text-2: var(--clr-gray-800);
+  --modal-text-3: var(--clr-black-800);
+  --modal-btn-border: var(--clr-orange);
+  --modal-btn-text: var(--clr-white);
+  --modal-btn-text-2: var(--clr-orange);
+  --modal-btn-background: var(--clr-white);
   /* theme dark end */
 }
 
 .themeLight {
-  --header: var(--clr-white);
   --body: var(--clr-white);
+  --body-text: var(--clr-black-800);
 
+  --header: var(--clr-white);
   --header-text: var(--clr-gray-900);
   --header-logo-text: var(--clr-black-600);
   --header-mobile-menu-text: var(--clr-black-800);
-  --body-text: var(--clr-black-800);
   --header-mobile-bg: var(--clr-white-blur);
+
+  --modal-background: var(--clr-white);
+  --modal-span-background: var(--clr-gray-500);
+  --modal-text-1: var(--clr-black-800);
+  --modal-text-2: var(--clr-black-800);
+  --modal-text-3: var(--clr-black-800);
+  --modal-btn-border: var(--clr-orange);
+  --modal-btn-text: var(--clr-black-800);
+  --modal-btn-text-2: var(--clr-orange);
+  --modal-btn-background: var(--clr-black-800);
 }

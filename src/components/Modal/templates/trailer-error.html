@@ -1,5 +1,20 @@
-<div class="trailer-error">
-  <h3>OOPS…</h3>
-  <p>We are very sorry!<br />But we couldn’t find the trailer.</p>
-  <img src="{{image}}" alt="No trailer" />
+<div class="modal">
+  <button class="modal__close" type="button" aria-label="Close" data-modal-close>
+    <svg class="modal__close-icon">
+      <use href="/src/images/icons/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <h2 class="modal__title">OOPS...</h2>
+  <p class="modal__text">
+    We are very sorry! <br />
+    But we couldn’t find the trailer.
+  </p>
+
+  <picture>
+    <source srcset="/src/images/desktop/modal/modal-error.png" media="(min-width:1280px)">
+    <source srcset="/src/images/tablet/modal/modal-error.png" media="(min-width:768px)">
+
+    <img class="trailler-error__image" src="/src/images/mobile/modal/modal-error.png" alt="Trailer not found">
+  </picture>
 </div>
