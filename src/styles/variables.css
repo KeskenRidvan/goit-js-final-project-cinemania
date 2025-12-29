@@ -70,6 +70,9 @@
   --modal-btn-text: var(--clr-white);
   --modal-btn-text-2: var(--clr-orange);
   --modal-btn-background: var(--clr-white);
+
+  --library-background: var(--clr-black-800);
+  --library-text: var(--clr-white);
   /* theme dark end */
 }
 
@@ -92,4 +95,7 @@
   --modal-btn-text: var(--clr-black-800);
   --modal-btn-text-2: var(--clr-orange);
   --modal-btn-background: var(--clr-black-800);
+
+  --library-background: var(--clr-white);
+  --library-text: var(--clr-black-800);
 }

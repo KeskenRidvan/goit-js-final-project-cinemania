@@ -9,6 +9,9 @@ import { openTrailerModal, openMovieDetailModal } from "../Modal/modal";
 
 export const createHero = async () => {
   const heroRoot = document.querySelector("#hero");
+
+  if (!heroRoot) return;
+
   const movie = await heroTrendingRandomMovie();
 
   if (movie) {
@@ -30,8 +33,8 @@ export const createHero = async () => {
       id && openMovieDetailModal(id);
     };
 
-    trailerBtn?.addEventListener("click", (e) => handleTrailerBtn(e));
-    detailBtn?.addEventListener("click", (e) => handleDetailBtn(e));
+    trailerBtn?.addEventListener("click", (event) => handleTrailerBtn(event));
+    detailBtn?.addEventListener("click", (event) => handleDetailBtn(event));
 
     return;
   }

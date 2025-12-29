@@ -8,6 +8,11 @@ import alertTpl from "./templates/alert.html?raw";
 import trailerTpl from "./templates/trailer.html?raw";
 
 import { axiosClient } from "../../services/axiosClient";
+import {
+  addToLibrary,
+  removeFromLibrary,
+  isInLibrary,
+} from "../../services/storage";
 
 let instance = null;
 
@@ -17,7 +22,7 @@ const unlockScroll = () => document.body.classList.remove("is-modal-open");
 const render = (template, data) =>
   template.replace(/\{\{(\w+)\}\}/g, (_, key) => data?.[key] ?? "");
 
-export const openModal = (html) => {
+export const openModal = (html, onShowCallback = null) => {
   if (instance) instance.close();
 
   instance = basicLightbox.create(html, {
@@ -27,13 +32,13 @@ export const openModal = (html) => {
       const closeBtn = inst.element().querySelector("[data-modal-close]");
       closeBtn?.addEventListener("click", () => inst.close());
 
-      const handleEscape = (e) => {
-        if (e.key === "Escape") inst.close();
+      const handleEscape = (event) => {
+        event.key === "Escape" && inst.close();
       };
-
       document.addEventListener("keydown", handleEscape);
-
       inst.onKeyDownRef = handleEscape;
+
+      onShowCallback && onShowCallback(inst);
     },
     onClose: (inst) => {
       unlockScroll();
@@ -43,31 +48,6 @@ export const openModal = (html) => {
   });
 
   instance.show();
-};
-
-export const openTrailerModal = async (movieId) => {
-  try {
-    const { data } = await axiosClient.get(`/movie/${movieId}/videos`);
-    const trailer = (data?.results || []).find(
-      (v) =>
-        v.site === "YouTube" &&
-        (v.type === "Trailer" || v.type === "Teaser") &&
-        v.key
-    );
-
-    if (!trailer) {
-      const html = render(trailerErrorTpl);
-      openModal(html);
-      return;
-    }
-
-    const trailerHtml = render(trailerTpl, { trailer: trailer.key });
-    openModal(trailerHtml);
-  } catch (error) {
-    console.error("Trailer Fetch Error:", error);
-    const html = render(trailerErrorTpl);
-    openModal(html);
-  }
 };
 
 export const openMovieDetailModal = async (movieId) => {
@@ -86,8 +66,60 @@ export const openMovieDetailModal = async (movieId) => {
         ? `${baseImg}${movie.poster_path}`
         : "https://via.placeholder.com/300x450",
     });
-    openModal(html);
+
+    openModal(html, (modalInstance) => {
+      const modalElement = modalInstance.element();
+      const libBtn = modalElement.querySelector(".btn-outline-2");
+
+      if (!libBtn) return;
+
+      const updateBtnText = () => {
+        libBtn.textContent = isInLibrary(movie.id)
+          ? "Remove from library"
+          : "Add to my library";
+      };
+
+      updateBtnText();
+
+      const handleLibBtn = () => {
+        isInLibrary(movie.id)
+          ? removeFromLibrary(movie.id)
+          : addToLibrary(movie);
+
+        updateBtnText();
+
+        window.dispatchEvent(
+          new CustomEvent("library:changed", { detail: { movieId: movie.id } })
+        );
+      };
+
+      libBtn.addEventListener("click", handleLibBtn);
+    });
   } catch (error) {
+    console.error(error);
     openModal(alertTpl);
+  }
+};
+
+export const openTrailerModal = async (movieId) => {
+  try {
+    const { data } = await axiosClient.get(`/movie/${movieId}/videos`);
+    const trailer = (data?.results || []).find(
+      (v) =>
+        v.site === "YouTube" &&
+        (v.type === "Trailer" || v.type === "Teaser") &&
+        v.key
+    );
+
+    if (!trailer) {
+      openModal(trailerErrorTpl);
+      return;
+    }
+
+    const trailerHtml = render(trailerTpl, { trailer: trailer.key });
+    openModal(trailerHtml);
+  } catch (error) {
+    console.error("Trailer Fetch Error:", error);
+    openModal(trailerErrorTpl);
   }
 };

@@ -1,5 +1,5 @@
 .hero-landing__container {
-  background-image: url("../../../images/mobile/hero/hero.png");
+  background-image: url("../../../images/mobile/hero/home/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 @media screen and (min-width: 768px) {
   .hero-landing__container {
     padding: 62px auto;
-    background-image: url("../../../images/tablet/hero/hero.png");
+    background-image: url("../../../images/tablet/hero/home/hero.png");
     height: 432px;
   }
 
@@ -75,7 +75,7 @@
 @media screen and (min-width: 1280px) {
   .hero-landing__container {
     padding: 169px auto;
-    background-image: url("../../../images/desktop/hero/hero.png");
+    background-image: url("../../../images/desktop/hero/home/hero.png");
     height: 720px;
   }
 

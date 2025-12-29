@@ -1,0 +1,145 @@
+.movie-card {
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+
+  outline: 2px solid transparent;
+  transition: outline-color 160ms ease, transform 160ms ease;
+}
+
+.movie-card:hover,
+.movie-card:focus-within {
+  outline-color: var(--clr-orange);
+  transform: translateY(-2px);
+}
+
+.movie-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 280 / 406;
+  background: var(--clr-black-800);
+}
+
+.movie-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 63.48%,
+    rgba(0, 0, 0, 0.9) 92.16%
+  );
+
+  pointer-events: none;
+}
+
+.movie-card__info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 14px 14px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  z-index: 2;
+}
+
+.movie-card__title {
+  color: var(--clr-white);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.movie-card__bottom-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.movie-card__meta {
+  color: var(--clr-gray-800);
+  font-size: var(--fs-xs);
+  line-height: 1.2;
+
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  min-width: 0;
+}
+
+.movie-card__genre {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.movie-card__separator {
+  opacity: 0.7;
+}
+
+.movie-card__year {
+  white-space: nowrap;
+}
+
+.movie-card__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.movie-card__star {
+  width: 14px;
+  height: 14px;
+}
+
+@media (min-width: 768px) {
+  .movie-card__info {
+    padding: 16px 16px 14px;
+  }
+
+  .movie-card__meta {
+    font-size: var(--fs-sm);
+  }
+
+  .movie-card__star {
+    width: 16px;
+    height: 16px;
+  }
+
+  .movie-card__genre {
+    max-width: 190px;
+  }
+
+  .movie-card__image-wrapper {
+    aspect-ratio: 224 / 325;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-card__star {
+    width: 18px;
+    height: 18px;
+  }
+}
