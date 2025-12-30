@@ -9,7 +9,6 @@ const getCountByViewport = () =>
   window.matchMedia("(min-width: 768px)").matches ? 3 : 1;
 
 export const createWeeklyTrends = async () => {
-  // ✅ Senin HTML'inde id weekly-trends
   const root = document.querySelector("#weekly-trends");
   if (!root) return;
 
@@ -37,13 +36,11 @@ export const createWeeklyTrends = async () => {
 
     render();
 
-    // ✅ viewport değişince 1 <-> 3
     const mq = window.matchMedia("(min-width: 768px)");
     mq.addEventListener("change", render);
 
-    // ✅ modal open (delegation)
-    listContainer.addEventListener("click", (e) => {
-      const card = e.target.closest(".movie-card");
+    listContainer.addEventListener("click", (event) => {
+      const card = event.target.closest(".movie-card");
       if (!card) return;
 
       const id = card.dataset.id;
