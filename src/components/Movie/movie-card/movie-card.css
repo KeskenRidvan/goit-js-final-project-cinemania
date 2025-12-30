@@ -5,6 +5,8 @@
 
   outline: 2px solid transparent;
   transition: outline-color 160ms ease, transform 160ms ease;
+
+  width: 280px;
 }
 
 .movie-card:hover,
@@ -115,6 +117,10 @@
 }
 
 @media (min-width: 768px) {
+  .movie-card {
+    width: 225px;
+  }
+
   .movie-card__info {
     padding: 16px 16px 14px;
   }
@@ -138,6 +144,10 @@
 }
 
 @media (min-width: 1280px) {
+  .movie-card {
+    width: 395px;
+  }
+
   .movie-card__star {
     width: 18px;
     height: 18px;

@@ -1,9 +1,20 @@
 @import "./variables.css";
 @import "./reset.css";
 
+body {
+  background: var(--body);
+  color: var(--body-text);
+}
+
 #app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
 }
 
 .container {

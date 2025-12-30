@@ -1,0 +1,60 @@
+#weekly-trends {
+  margin-top: 40px;
+}
+
+.weekly-trends__container {
+  max-width: 100%;
+}
+
+.weekly-trends__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.weekly-trends__title {
+  font-size: var(--fs-xl);
+  letter-spacing: 0.08px;
+  font-weight: var(--fw-regular);
+  color: var(--modal-text-1);
+}
+
+.weekly-trends__seeall {
+  color: var(--clr-orange);
+  font-size: var(--fs-xl);
+  letter-spacing: 0.08px;
+  font-weight: var(--fw-regular);
+}
+
+.weekly-trends #weekly-trend-card.movie-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .weekly-trends__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .weekly-trends__seeall {
+    font-size: var(--fs-2xl);
+  }
+
+  .weekly-trends #weekly-trend-card.movie-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .weekly-trends__title {
+    font-size: var(--fs-3xl);
+  }
+
+  .weekly-trends__seeall {
+    font-size: var(--fs-3xl);
+  }
+}
