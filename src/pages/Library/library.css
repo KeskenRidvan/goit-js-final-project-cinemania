@@ -21,7 +21,6 @@
   margin-bottom: 16px;
 }
 
-/* ✅ boş state: grid yerine flex */
 #library-list.library-list--empty {
   display: flex;
   justify-content: center;
@@ -31,9 +30,15 @@
   min-height: 280px;
 }
 
-/* MovieGrid css .movie-grid verdiği display:grid’i boş state’te ez */
 #library-list.library-list--empty.movie-grid {
   display: flex;
+}
+
+.library-main--empty {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .library-empty {

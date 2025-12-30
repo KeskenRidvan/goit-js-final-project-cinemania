@@ -7,6 +7,7 @@ import { getLibrary } from "../../services/storage";
 import { openMovieDetailModal } from "../../components/Modal/modal";
 import { renderMovieGrid } from "../../components/Movie/movie-grid/movie-grid";
 import { createGenreSelect } from "../../components/Movie/movie-genre-select/movie-genre-select";
+import { createFooter } from "../../components/Footer/footer";
 
 const setListMode = (container, mode) => {
   container.classList.remove("library-list--grid", "library-list--empty");
@@ -64,6 +65,7 @@ const filterMoviesByGenre = (movies, genre) => {
 const initLibrary = () => {
   createHeader();
   createLibraryHero();
+  createFooter();
 
   const listContainer = document.querySelector("#library-list");
   const genreRoot = document.querySelector("#genre-filter");

@@ -1,6 +1,11 @@
 @import "./variables.css";
 @import "./reset.css";
 
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 320px;
   width: 100%;

@@ -1,0 +1,29 @@
+#footer {
+  padding: 24px 16px;
+  text-align: center;
+  background-color: var(--body);
+  color: var(--body-text);
+}
+
+.footer__text {
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  color: var(--body-text);
+}
+
+.footer__heart {
+  margin: 0 6px;
+}
+
+.footer__link {
+  border: none;
+  background: transparent;
+  color: var(--body-text);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footer__link:hover {
+  color: var(--clr-orange);
+}
