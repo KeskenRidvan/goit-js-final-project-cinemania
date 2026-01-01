@@ -32,18 +32,6 @@ const renderEmptyState = (container) => {
   `;
 };
 
-const renderNoResults = (container) => {
-  setListMode(container, "empty");
-  container.innerHTML = `
-    <div class="library-empty">
-      <div class="library-empty__content">
-        <p class="library-empty__title">No movies</p>
-        <p class="library-empty__text">No movies found for this genre.</p>
-      </div>
-    </div>
-  `;
-};
-
 const getGenresFromLibrary = (movies) => {
   const set = new Set();
   movies.forEach((movie) => {
@@ -67,7 +55,7 @@ const initLibrary = () => {
   createLibraryHero();
   createFooter();
 
-  const listContainer = document.querySelector("#library-list");
+  const listContainer = document.querySelector("#library__list");
   const genreRoot = document.querySelector("#genre-filter");
 
   if (!listContainer) return;

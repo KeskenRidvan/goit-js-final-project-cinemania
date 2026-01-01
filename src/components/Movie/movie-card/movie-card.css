@@ -6,7 +6,8 @@
   outline: 2px solid transparent;
   transition: outline-color 160ms ease, transform 160ms ease;
 
-  width: 280px;
+  max-width: 395px;
+  width: 100%;
 }
 
 .movie-card:hover,
@@ -17,12 +18,13 @@
 
 .movie-card__image-wrapper {
   position: relative;
-  width: 100%;
   aspect-ratio: 280 / 406;
+  width: 100%;
   background: var(--clr-black-800);
 }
 
 .movie-card__image {
+  max-width: 395px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -117,10 +119,6 @@
 }
 
 @media (min-width: 768px) {
-  .movie-card {
-    width: 225px;
-  }
-
   .movie-card__info {
     padding: 16px 16px 14px;
   }

@@ -1,44 +1,20 @@
-.library-container {
-  width: calc(320px - 40px);
-}
-
 .library__section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background-color: var(--library-background);
   padding: 45px 0px;
 }
 
-.library__section .library-container {
-  display: flex;
-  flex-direction: column;
+.library__container {
+  max-width: 1280px;
   width: 100%;
 }
 
 #genre-filter {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
 }
 
-#library-list.library-list--empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  min-height: 280px;
-}
-
-#library-list.library-list--empty.movie-grid {
-  display: flex;
-}
-
-.library-main--empty {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#library__list .movie-card {
+  max-width: 280px;
+  width: 100%;
 }
 
 .library-empty {
@@ -47,65 +23,32 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.movie-grid.library-list--empty {
+  display: flex;
 }
 
 .library-empty__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  color: var(--library-text);
   font-size: var(--fs-xl);
   text-align: center;
-
-  max-width: 280px;
-  color: var(--library-text);
-
-  gap: 4px;
 }
 
 @media screen and (min-width: 768px) {
-  .library-container {
-    width: calc(768px - 64px);
-  }
-
-  .library__section {
-    padding: 70px 0px;
-  }
-
-  #library-list.library-list--empty {
-    min-height: 360px;
-  }
-
-  .library-empty {
-    gap: 24px;
+  #library__list .movie-card {
+    max-width: 395px;
   }
 
   .library-empty__content {
     font-size: var(--fs-2xl);
-    max-width: 438px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .library-container {
-    width: calc(1280px - 64px);
-  }
-
-  .library__section {
-    padding: 130px 0px;
-  }
-
-  #library-list.library-list--empty {
-    min-height: 420px;
-  }
-
-  .library-empty {
-    gap: 28px;
-  }
-
   .library-empty__content {
-    font-size: var(--fs-2xl);
-    max-width: 584px;
+    font-size: 32px;
   }
 }
