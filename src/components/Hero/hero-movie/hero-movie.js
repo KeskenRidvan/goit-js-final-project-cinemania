@@ -1,6 +1,7 @@
 import "./hero-movie.css";
+import spriteUrl from "/src/images/icons/sprite.svg";
 
-const SPRITE_PATH = "/src/images/icons/sprite.svg";
+const SPRITE_PATH = spriteUrl;
 
 const clampTextByWords = (text, maxWords) => {
   if (!text) return "";
