@@ -25,7 +25,7 @@ const renderEmptyState = (container) => {
         <p class="library-empty__text">We are very sorry!</p>
         <p class="library-empty__text">You don’t have any movies at your library.</p>
       </div>
-      <a href="/catalog/" class="btn btn-orange library-empty__btn">
+      <a href="/goit-js-final-project-cinemania/catalog/" class="btn btn-orange library-empty__btn">
         Search movie
       </a>
     </div>

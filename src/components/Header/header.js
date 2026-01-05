@@ -1,6 +1,7 @@
 import "./header.css";
 import headerTemplate from "./header.html?raw";
 import { initTheme } from "../../javascript/theme";
+import spriteUrl from "../../images/icons/sprite.svg";
 
 const setActiveNavLink = () => {
   const currentPath = window.location.pathname;
@@ -28,6 +29,11 @@ export const createHeader = () => {
     mobileMenu.classList.toggle("header__nav-menu-active");
     backdrop.classList.toggle("header__backdrop-active");
   };
+
+  header.querySelectorAll("use").forEach(use => {
+    const currentHref = use.getAttribute("href");
+    use.setAttribute("href", `${spriteUrl}${currentHref}`);
+  });
 
   mobileMenuBtn.addEventListener("click", handleMobileMenuBtn);
   backdrop.addEventListener("click", handleMobileMenuBtn);

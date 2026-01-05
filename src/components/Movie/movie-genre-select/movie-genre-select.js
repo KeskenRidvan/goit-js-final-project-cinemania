@@ -1,5 +1,6 @@
 import "./movie-genre-select.css";
 import template from "./movie-genre-select.html?raw";
+import spriteUrl from "../../../images/icons/sprite.svg";
 
 export const createGenreSelect = ({
   containerSelector,
@@ -11,6 +12,11 @@ export const createGenreSelect = ({
   if (!root) return null;
 
   root.innerHTML = template;
+  
+  const use = root.querySelector("use");
+  if (use) {
+    use.setAttribute("href", `${spriteUrl}${use.getAttribute("href")}`);
+  }
 
   const wrapper = root.querySelector("[data-genre-select]");
   const btn = root.querySelector("[data-genre-btn]");

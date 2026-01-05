@@ -16,6 +16,7 @@ import {
   removeFromLibrary,
   isInLibrary,
 } from "../../services/storage";
+import spriteUrl from "../../images/icons/sprite.svg";
 
 let instance = null;
 
@@ -25,10 +26,15 @@ const unlockScroll = () => document.body.classList.remove("is-modal-open");
 const render = (template, data) =>
   template.replace(/\{\{(\w+)\}\}/g, (_, key) => data?.[key] ?? "");
 
+const processTemplate = (html) => {
+  return html.replace(/<use href="#/g, `<use href="${spriteUrl}#`);
+};
+
 export const openModal = (html, onShowCallback = null) => {
   instance && instance.close();
 
-  instance = basicLightbox.create(html, {
+  const processedHtml = processTemplate(html);
+  instance = basicLightbox.create(processedHtml, {
     onShow: (inst) => {
       lockScroll();
 
