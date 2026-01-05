@@ -26,7 +26,7 @@ import{s as k,i as w,r as T,a as E,c as L}from"./header-Cl8itn-T.js";import{a as
     </a>
   </div>
   <div class="weekly-trends__list movie-grid"></div>
-</div>`,R=()=>window.matchMedia("(min-width: 768px)").matches?3:1,P=async()=>{const e=document.querySelector("#weekly-trends");if(!e)return;e.innerHTML=F;const t=e.querySelector("#weekly-trend-card");if(!t)return;let n=[];const a=()=>{const o=R(),i=n.slice(0,o);i.length&&H(i,t)};try{const{data:o}=await m.get("/trending/movie/week");if(n=Array.isArray(o?.results)?o.results:[],!n.length)return;a(),window.matchMedia("(min-width: 768px)").addEventListener("change",a),t.addEventListener("click",s=>{const l=s.target.closest(".movie-card");if(!l)return;const c=l.dataset.id;c&&h(c)})}catch(o){console.error("Weekly trends error:",o)}},N=`<div class="container upcoming__container">
+</div>`,R=()=>window.matchMedia("(min-width: 768px)").matches?3:1,P=async()=>{const e=document.querySelector("#weekly-trends");if(!e)return;e.innerHTML=F;const t=e.querySelector(".weekly-trends__list");if(!t)return;let n=[];const a=()=>{const o=R(),i=n.slice(0,o);i.length&&H(i,t)};try{const{data:o}=await m.get("/trending/movie/week");if(n=Array.isArray(o?.results)?o.results:[],!n.length)return;a(),window.matchMedia("(min-width: 768px)").addEventListener("change",a),t.addEventListener("click",s=>{const l=s.target.closest(".movie-card");if(!l)return;const c=l.dataset.id;c&&h(c)})}catch(o){console.error("Weekly trends error:",o)}},N=`<div class="container upcoming__container">
   <h2 class="upcoming__heading">UPCOMING THIS MONTH</h2>
 
   <div class="upcoming__layout">
