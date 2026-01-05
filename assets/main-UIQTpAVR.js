@@ -25,7 +25,7 @@ import{i as w,r as k,a as T,c as E}from"./header-Cl8itn-T.js";import{a as m,o as
       See all
     </a>
   </div>
-  <div class="weekly-trends__list movie-grid"></div>
+  <div id="weekly-trend-card" class="weekly-trends__list movie-grid"></div>
 </div>`,R=()=>window.matchMedia("(min-width: 768px)").matches?3:1,U=async()=>{const e=document.querySelector("#weekly-trends");if(!e)return;e.innerHTML=F;const t=e.querySelector("#weekly-trend-card");if(!t)return;let n=[];const a=()=>{const o=R(),i=n.slice(0,o);i.length&&q(i,t)};try{const{data:o}=await m.get("/trending/movie/week");if(n=Array.isArray(o?.results)?o.results:[],!n.length)return;a(),window.matchMedia("(min-width: 768px)").addEventListener("change",a),t.addEventListener("click",s=>{const l=s.target.closest(".movie-card");if(!l)return;const c=l.dataset.id;c&&h(c)})}catch(o){console.error("Weekly trends error:",o)}},P=`<div class="container upcoming__container">
   <h2 class="upcoming__heading">UPCOMING THIS MONTH</h2>
 
