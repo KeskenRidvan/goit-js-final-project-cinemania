@@ -14,7 +14,7 @@ export const createWeeklyTrends = async () => {
 
   root.innerHTML = template;
 
-  const listContainer = root.querySelector("#weekly-trend-card");
+  const listContainer = root.querySelector(".weekly-trends__list");
   if (!listContainer) return;
 
   let allMovies = [];
