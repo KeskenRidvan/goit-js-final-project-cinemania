@@ -149,7 +149,10 @@ const linkedinIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98
 const createTeamMemberCard = (member) => {
   const name = escapeHtml(member?.name ?? "Unknown");
   const role = escapeHtml(member?.role ?? "");
-  const avatar = escapeHtml(member?.avatar ?? "https://placehold.co/400");
+  const avatarUrl = member.avatar
+    ? new URL(`../../images/${member.avatar}`, import.meta.url).href
+    : "https://placehold.co/400";
+  const avatar = escapeHtml(avatarUrl);
   const gh = member?.github ? escapeHtml(member.github) : "";
   const li = member?.linkedin ? escapeHtml(member.linkedin) : "";
 
