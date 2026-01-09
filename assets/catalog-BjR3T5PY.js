@@ -1,4 +1,4 @@
-import{d as M,e as S,o as x,r as q,a as E}from"./movie-grid-DRZykVbG.js";import{c as P}from"./hero-CyNupbtx.js";const C=`<div class="filters" data-filters>
+import{d as M,e as S,o as x,r as q,a as E}from"./movie-grid-DQYP1D23.js";import{c as P}from"./hero-Cny5CyYT.js";const C=`<div class="filters" data-filters>
   <input class="filters__input" data-search-input type="text" placeholder="Search" autocomplete="off" />
 
   <input class="filters__input filters__input--film" data-film-input type="text" placeholder="Film"
