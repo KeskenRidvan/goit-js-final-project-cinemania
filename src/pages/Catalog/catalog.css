@@ -1,1 +1,16 @@
+.catalog-results__container {
+  max-width: 1280px;
+}
+.catalog-filters-section {
+  padding: 16px 0 12px;
+}
 
+@media (min-width: 768px) {
+  .catalog-filters-section {
+    padding: 24px 0 16px;
+  }
+}
+
+.catalog-results-section {
+  padding-bottom: 40px;
+}

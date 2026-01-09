@@ -8,7 +8,7 @@ import alertTpl from "./templates/alert.html?raw";
 import trailerTpl from "./templates/trailer.html?raw";
 
 import teamModalTpl from "./templates/team-modal.html?raw";
-import team from "../../data/team.json";
+import team from "/src/data/team.json";
 
 import { axiosClient } from "../../services/axiosClient";
 import {

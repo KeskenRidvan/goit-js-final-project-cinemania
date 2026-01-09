@@ -73,6 +73,9 @@
 
   --library-background: var(--clr-black-800);
   --library-text: var(--clr-white);
+
+  --catalog-pages: var(--clr-white);
+  --catalog-search: var(--clr-white);
   /* theme dark end */
 }
 
@@ -98,4 +101,7 @@
 
   --library-background: var(--clr-white);
   --library-text: var(--clr-black-800);
+
+  --catalog-pages: var(--clr-black-800);
+  --catalog-search: var(--clr-black-800);
 }

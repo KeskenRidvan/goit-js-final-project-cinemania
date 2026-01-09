@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cinemania | Catalog</title>
-  <script type="module" src="/src/pages/Catalog/catalog.js" defer></script>
 
+  <script type="module" src="/src/pages/Catalog/catalog.js" defer></script>
 </head>
 
 <body>
@@ -15,7 +15,20 @@
     <header id="header"></header>
 
     <main>
+      <section id="hero"></section>
 
+      <section class="catalog-filters-section">
+        <div class="container">
+          <div id="catalog-filters"></div>
+        </div>
+      </section>
+
+      <section class="catalog-results-section">
+        <div class="container catalog-results__container">
+          <div id="catalog-list" class="movie-grid"></div>
+          <div id="pagination"></div>
+        </div>
+      </section>
     </main>
 
     <footer id="footer"></footer>
