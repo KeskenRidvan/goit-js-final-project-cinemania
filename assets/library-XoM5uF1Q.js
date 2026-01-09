@@ -1,4 +1,4 @@
-import{s as E,d as G,e as M,o as A,g as w,r as k}from"./movie-grid-FzENuq0Q.js";const q=`<div class="container hero-library__container">
+import{s as E,d as G,e as M,o as A,g as w,r as k}from"./movie-grid-ETmJYsIg.js";const q=`<div class="container hero-library__container">
   <h1 class="hero-library__title">Create Your Dream Cinema</h1>
   <p class="hero-library__desc">Is a guide to designing a personalized movie theater experience with the right
     equipment, customized decor, and favorite films. This guide helps you bring the cinema experience into your own home

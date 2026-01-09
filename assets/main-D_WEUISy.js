@@ -1,4 +1,4 @@
-import{a as m,o as w,r as S,i as y,b as k,c as E,d as q,e as L}from"./movie-grid-FzENuq0Q.js";import{c as T}from"./hero-SS4v5V5p.js";const C=`<div class="container weekly-trends__container">
+import{a as m,o as w,r as S,i as y,b as k,c as E,d as q,e as L}from"./movie-grid-ETmJYsIg.js";import{c as T}from"./hero-hpBvxOhO.js";const C=`<div class="container weekly-trends__container">
   <div class="weekly-trends__header">
     <h2 class="weekly-trends__title">
       Weekly Trends

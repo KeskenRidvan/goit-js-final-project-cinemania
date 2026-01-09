@@ -1,4 +1,4 @@
-import{s as _,a as p,f as v,o as b}from"./movie-grid-FzENuq0Q.js";const g=`<div class="container hero-landing__container">
+import{s as _,a as p,f as v,o as b}from"./movie-grid-ETmJYsIg.js";const g=`<div class="container hero-landing__container">
   <h1 class="hero-landing__header">Let's Make Your Own Cinema</h1>
   <p class="hero-landing__description"></p>
   <button type="button" id="hero-landing__btn-start" class="btn btn-orange">Get Started</button>
