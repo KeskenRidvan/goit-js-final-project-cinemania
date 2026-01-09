@@ -17,6 +17,7 @@ import {
   isInLibrary,
 } from "../../services/storage";
 import spriteUrl from "../../images/icons/sprite.svg";
+import ridvanAvatar from "../../images/teams/ridvankesken/ridvan-kesken.jpeg";
 
 let instance = null;
 
@@ -149,10 +150,9 @@ const linkedinIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98
 const createTeamMemberCard = (member) => {
   const name = escapeHtml(member?.name ?? "Unknown");
   const role = escapeHtml(member?.role ?? "");
-  const avatarUrl = member.avatar
-    ? new URL(`../../images/${member.avatar}`, import.meta.url).href
-    : "https://placehold.co/400";
-  const avatar = escapeHtml(avatarUrl);
+  const avatar =
+    member.name === "Ridvan Kesken" ? ridvanAvatar : "https://placehold.co/400";
+
   const gh = member?.github ? escapeHtml(member.github) : "";
   const li = member?.linkedin ? escapeHtml(member.linkedin) : "";
 
